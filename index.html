@@ -1,0 +1,100 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>HATCH ACRONYM</title>
+  </head>
+  <body>
+
+    <h1><span>H.A.T.C.H.</span></h1>
+    <h2><span>What does it stand for?</span></h2>
+    <h3><button id="button" onclick="generateAcronym(hatchLetters)">CLICK</button></h3>
+    <h4><p id="display"></p></h4>
+
+    <script>
+
+    var hatchLetters = [
+    ["Happenings", "Home", "Here", "Heart", "Hall", "Habitat", "Human", "Hands-on", "House", "Hardware", "Helping", "Hub"],
+    ["Arts", "And", "At", "Arena", "Area", "Association", "About", "Art", "Are", "A", "Academic", "As", "Application"],
+    ["Technology", "Tinkering", "Tools", "To", "The", "Team", "Trades", "Talent", "Technique", "Twenty-First Century", "Three-D", "Through", "Thinking", "Teaching"],
+    ["Crafts", "Craft", "Coding", "Classroom", "Community", "Construct", "Composition", "Center", "Commonwealth", "Collective", "Core", "Consortium", "Connections", "Creativity", "Cutting", "Collaborative"],
+    ["Happenings", "Home", "Here", "Heart", "Hall", "Habitat", "Human", "House", "Hardware", "Help", "Hub"] ];
+
+    function generateAcronym(acronymWords){
+      var possibleAcronym = [];
+      for (i = 0; i < acronymWords.length; i++) {
+        possibleAcronym.push(acronymWords[i][Math.floor(Math.random() * acronymWords[i].length)]);
+      }
+      document.getElementById("display").innerHTML = possibleAcronym.join("\n") ;
+    }
+
+    </script>
+
+    <style>
+
+    h1 {
+      text-align: center;
+    }
+
+    h1 span {
+      border-radius: 25px;
+      font-family: Impact, sans-serif;
+      font-size: 500%;
+      color: #ff8c00;
+      background-color: #00f2ff;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    h2 span {
+      font-family: "Lucida Console", monospace;
+      font-size: 150%;
+      color: #5242ff;
+    }
+
+    h3 {
+      text-align: center;
+    }
+
+    #button {
+      background-color: #ff6df0;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      border-radius: 25px;
+      font-family: "Trebuchet MS", Helvetica, sans-serif;
+    }
+
+    #button:active {
+      background-color: #7affa6;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      border-radius: 25px;
+      font-family: "Trebuchet MS", Helvetica, sans-serif;
+    }
+
+    h4 {
+      text-align: center;
+    }
+
+    #display {
+      font-family: "Courier New", Courier, monospace;
+      font-size: 300%;
+      color: #ff327a;
+    }
+
+    </style>
+  </body>
+</html>
